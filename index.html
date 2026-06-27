@@ -9,9 +9,43 @@
 <body>
   <main>
     <h1>Hello, I'm Max</h1>
-    <p>This is the foundation. More coming soon.</p>
     <button id="clickme">Click me</button>
     <p id="counter">You haven't clicked yet.</p>
+
+    <hr class="divider">
+
+    <div class="tab-bar">
+      <button class="tab active" data-tab="about">About</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </div>
+
+    <div id="tab-about" class="panel active">
+      <p>I'm learning to build things on the web, one session at a time. This site is my sandbox.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+    <div id="tab-projects" class="panel">
+      <div class="project-card">
+        <h3>This Site</h3>
+        <p>A personal foundation I'm building up over time.</p>
+      </div>
+      <div class="project-card">
+        <h3>Next Project</h3>
+        <p>Coming soon.</p>
+      </div>
+    </div>
+
+    <div id="tab-contact" class="panel">
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Your email">
+      <textarea placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </div>
   </main>
 
   <button id="settings-btn" aria-label="Settings">⚙</button>
