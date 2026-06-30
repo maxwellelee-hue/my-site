@@ -3,58 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Site</title>
+  <title>Max's Gopher Extermination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <span class="site-name">MAX</span>
+    <nav>
+      <button class="tab active" data-tab="about">ABOUT</button>
+      <button class="tab" data-tab="projects">PROJECTS</button>
+      <button class="tab" data-tab="contact">CONTACT</button>
+    </nav>
+  </header>
+
   <main>
-    <h1>Hello, I'm Max</h1>
-    <button id="clickme">Click me</button>
-    <p id="counter">You haven't clicked yet.</p>
-
-    <hr class="divider">
-
-    <div class="tab-bar">
-      <button class="tab active" data-tab="about">About</button>
-      <button class="tab" data-tab="projects">Projects</button>
-      <button class="tab" data-tab="contact">Contact</button>
-    </div>
-
     <div id="tab-about" class="panel active">
-      <p>I'm learning to build things on the web, one session at a time. This site is my sandbox.</p>
-      <div class="tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
+      <div class="about-text">
+        <p class="panel-label">ABOUT</p>
+        <h1>We eliminate gopher<br>infestations — completely.</h1>
+        <p class="body-text">Max and his crew deploy precision trap systems across residential and commercial properties. We locate active tunnels, set professional-grade traps, and follow through until every gopher is gone. No shortcuts. No repeat infestations.</p>
+        <div class="tags">
+          <span>TRAP SETTING</span>
+          <span>INFESTATION REMOVAL</span>
+          <span>PROPERTY PROTECTION</span>
+        </div>
+      </div>
+      <div class="about-visual">
+        <canvas id="gopher-canvas"></canvas>
       </div>
     </div>
 
     <div id="tab-projects" class="panel">
-      <div class="project-card">
-        <h3>This Site</h3>
-        <p>A personal foundation I'm building up over time.</p>
-      </div>
-      <div class="project-card">
-        <h3>Next Project</h3>
-        <p>Coming soon.</p>
+      <p class="panel-label">PROJECTS</p>
+      <div class="project-list">
+        <div class="project-item">
+          <h3>This Site</h3>
+          <p>A personal foundation I'm building up over time.</p>
+        </div>
+        <div class="project-item">
+          <h3>Next Project</h3>
+          <p>Coming soon.</p>
+        </div>
       </div>
     </div>
 
     <div id="tab-contact" class="panel">
-      <input type="text" placeholder="Your name">
-      <input type="email" placeholder="Your email">
-      <textarea placeholder="Your message"></textarea>
-      <button type="submit">Send</button>
+      <p class="panel-label">CONTACT</p>
+      <form class="contact-form">
+        <input type="text" placeholder="NAME">
+        <input type="email" placeholder="EMAIL">
+        <textarea placeholder="MESSAGE"></textarea>
+        <button type="submit">SEND</button>
+      </form>
     </div>
   </main>
 
-  <button id="settings-btn" aria-label="Settings">⚙</button>
-  <div id="settings-panel">
-    <button class="swatch" data-theme="ocean" style="background: linear-gradient(135deg, #1e3a8a, #6d28d9)" title="Ocean"></button>
-    <button class="swatch" data-theme="forest" style="background: linear-gradient(135deg, #14532d, #15803d)" title="Forest"></button>
-    <button class="swatch" data-theme="sunset" style="background: linear-gradient(135deg, #9a3412, #b45309)" title="Sunset"></button>
-  </div>
-
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
   <script src="script.js"></script>
+  <script type="module" src="gopher.js"></script>
 </body>
 </html>
