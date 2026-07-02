@@ -14,7 +14,7 @@
     <span class="site-name">MAX</span>
     <nav>
       <button class="tab active" data-tab="about">ABOUT</button>
-      <button class="tab" data-tab="projects">PROJECTS</button>
+      <button class="tab" data-tab="book">BOOK</button>
       <button class="tab" data-tab="contact">CONTACT</button>
     </nav>
   </header>
@@ -30,23 +30,29 @@
           <span>INFESTATION REMOVAL</span>
           <span>PROPERTY PROTECTION</span>
         </div>
+        <div class="about-contact">
+          <a href="mailto:maxwell.e.lee@gmail.com" class="about-contact-link">maxwell.e.lee@gmail.com</a>
+          <span class="about-contact-sep">·</span>
+          <a href="tel:3602068165" class="about-contact-link">360.206.8165</a>
+        </div>
       </div>
       <div class="about-visual">
         <canvas id="gopher-canvas"></canvas>
       </div>
     </div>
 
-    <div id="tab-projects" class="panel">
-      <p class="panel-label">PROJECTS</p>
-      <div class="project-list">
-        <div class="project-item">
-          <h3>This Site</h3>
-          <p>A personal foundation I'm building up over time.</p>
-        </div>
-        <div class="project-item">
-          <h3>Next Project</h3>
-          <p>Coming soon.</p>
-        </div>
+    <div id="tab-book" class="panel">
+      <p class="panel-label">BOOK</p>
+      <h2 class="book-heading">Schedule an inspection.</h2>
+      <p class="book-subtext">Choose an available slot below — it books directly to our calendar and we'll confirm your appointment.</p>
+      <div class="book-frame-wrap">
+        <iframe
+          id="book-frame"
+          class="book-frame"
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2XSDU6UEJoRjTnbpty0aBfmzhiXjEYlrKUV_Fyr5NdXl6glFqw-F7xdM44jo46SAzBf2LtN0YV"
+          frameborder="0"
+          title="Book an appointment">
+        </iframe>
       </div>
     </div>
 
