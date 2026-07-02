@@ -109,8 +109,8 @@ main {
 }
 
 .about-visual {
-  flex: 0 0 360px;
-  height: 420px;
+  flex: 0 0 420px;
+  height: 500px;
 }
 
 #gopher-canvas {
