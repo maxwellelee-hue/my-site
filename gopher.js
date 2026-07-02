@@ -7,7 +7,7 @@ if (canvas) {
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(42, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
-  camera.position.set(0, 0.55, 2.6);
+  camera.position.set(0, 0.55, 3.1);
   camera.lookAt(0, 0.15, 0);
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -41,7 +41,7 @@ if (canvas) {
       const box    = new THREE.Box3().setFromObject(gopherModel);
       const center = box.getCenter(new THREE.Vector3());
       const size   = box.getSize(new THREE.Vector3());
-      const scale  = 3.0 / Math.max(size.x, size.y, size.z);
+      const scale  = 2.4 / Math.max(size.x, size.y, size.z);
 
       gopherModel.scale.setScalar(scale);
       gopherModel.position.set(
