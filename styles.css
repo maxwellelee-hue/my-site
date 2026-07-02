@@ -29,8 +29,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.25rem 4rem;
+  padding: 1.75rem 4rem;
   border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#brand {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .site-name {
@@ -39,9 +46,16 @@ header {
   letter-spacing: 0.25em;
 }
 
+.site-sub {
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--fg-dim);
+}
+
 nav {
   display: flex;
-  gap: 3rem;
+  gap: 2.25rem;
 }
 
 .tab {
@@ -49,7 +63,7 @@ nav {
   border: none;
   color: var(--fg-dim);
   font-family: inherit;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   cursor: pointer;
@@ -58,9 +72,7 @@ nav {
   border-bottom: 1px solid transparent;
 }
 
-.tab:hover {
-  color: var(--fg);
-}
+.tab:hover { color: var(--fg); }
 
 .tab.active {
   color: var(--fg);
@@ -80,22 +92,39 @@ main {
   display: none;
   height: 100%;
   overflow-y: auto;
-  padding: 6rem 4rem;
+  padding: 5rem 4rem;
 }
 
-.panel.active {
-  display: block;
-}
+.panel.active { display: block; }
 
 .panel-label {
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.3em;
   color: var(--accent);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
-/* ── About ── */
+/* ── Shared section heading + body ── */
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+}
+
+.section-body {
+  font-size: 0.93rem;
+  font-weight: 300;
+  line-height: 1.78;
+  color: var(--fg-dim);
+  max-width: 480px;
+  margin-bottom: 1.5rem;
+}
+
+/* ── ABOUT ── */
 
 #tab-about.active {
   display: flex;
@@ -103,10 +132,7 @@ main {
   gap: 6rem;
 }
 
-.about-text {
-  flex: 1;
-  min-width: 0;
-}
+.about-text { flex: 1; min-width: 0; }
 
 .about-visual {
   flex: 0 0 420px;
@@ -140,6 +166,7 @@ h1 {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin-bottom: 0;
 }
 
 .tags span {
@@ -150,8 +177,6 @@ h1 {
   border: 1px solid var(--accent-dim);
   padding: 0.4rem 0.85rem;
 }
-
-/* ── About contact line ── */
 
 .about-contact {
   display: flex;
@@ -169,37 +194,118 @@ h1 {
   transition: color 0.2s;
 }
 
-.about-contact-link:hover {
-  color: var(--accent);
-}
+.about-contact-link:hover { color: var(--accent); }
 
 .about-contact-sep {
   color: var(--border);
   font-size: 0.9rem;
 }
 
-/* ── Book ── */
+/* ── METHODS ── */
 
-#tab-book {
-  max-width: 1000px;
+.method-steps {
+  list-style: none;
+  max-width: 560px;
+  margin: 3.5rem 0;
 }
 
-.book-heading {
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  margin-bottom: 1.5rem;
+.method-step {
+  display: flex;
+  gap: 2.25rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
 }
 
-.book-subtext {
-  font-size: 0.9rem;
+.method-step:last-child { border-bottom: 1px solid var(--border); }
+
+.step-num {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  padding-top: 4px;
+  min-width: 44px;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 0.83rem;
   font-weight: 300;
-  line-height: 1.75;
   color: var(--fg-dim);
-  max-width: 440px;
-  margin-bottom: 3.5rem;
+  line-height: 1.75;
+  max-width: 420px;
 }
+
+.promise-bar {
+  display: flex;
+  gap: 3rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border);
+  max-width: 680px;
+}
+
+.promise-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.promise-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--fg-dim);
+  line-height: 1.7;
+}
+
+/* ── PRICING ── */
+
+.pricing-includes {
+  margin: 3rem 0;
+  max-width: 480px;
+}
+
+.pricing-includes-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--fg-dim);
+  margin-bottom: 1.25rem;
+}
+
+.pricing-list {
+  list-style: none;
+}
+
+.pricing-list li {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--fg-dim);
+  line-height: 1.7;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.pricing-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+/* ── BOOK ── */
 
 .book-btn {
   display: inline-block;
@@ -228,7 +334,25 @@ h1 {
   color: var(--fg-dim);
 }
 
-/* ── Contact ── */
+/* ── CONTACT ── */
+
+.contact-direct {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact-direct-link {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-direct-link:hover { color: var(--accent); }
 
 .contact-form {
   display: flex;

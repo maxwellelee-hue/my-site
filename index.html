@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Max's Gopher Extermination</title>
+  <title>Gopher Academy — Max Lee</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,20 +11,27 @@
 </head>
 <body>
   <header>
-    <span class="site-name">MAX</span>
+    <div id="brand">
+      <span class="site-name">GOPHER ACADEMY</span>
+      <span class="site-sub">BY MAX LEE</span>
+    </div>
     <nav>
       <button class="tab active" data-tab="about">ABOUT</button>
+      <button class="tab" data-tab="methods">METHODS</button>
+      <button class="tab" data-tab="pricing">PRICING</button>
       <button class="tab" data-tab="book">BOOK</button>
       <button class="tab" data-tab="contact">CONTACT</button>
     </nav>
   </header>
 
   <main>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────────────── -->
     <div id="tab-about" class="panel active">
       <div class="about-text">
         <p class="panel-label">ABOUT</p>
-        <h1>We eliminate gopher<br>infestations — completely.</h1>
-        <p class="body-text">Max and his crew deploy precision trap systems across residential and commercial properties. We locate active tunnels, set professional-grade traps, and follow through until every gopher is gone. No shortcuts. No repeat infestations.</p>
+        <h1>We teach gophers<br>a lesson.</h1>
+        <p class="body-text">Max Lee and his crew deploy precision cinch trap systems across residential and commercial properties in Santa Rosa and throughout Sonoma and Napa Counties. We walk your property, locate every active tunnel, and follow through until the infestation is completely gone. No shortcuts. No repeat visits you didn't ask for.</p>
         <div class="tags">
           <span>TRAP SETTING</span>
           <span>INFESTATION REMOVAL</span>
@@ -41,10 +48,84 @@
       </div>
     </div>
 
+    <!-- ── METHODS ───────────────────────────────────────────────────────── -->
+    <div id="tab-methods" class="panel">
+      <p class="panel-label">OUR METHODS</p>
+      <h2 class="section-heading">Cinch traps.<br>Five visits.<br>Zero shortcuts.</h2>
+      <p class="section-body">We use cinch traps — fast, lethal, and ecologically sound. Every job begins with a full property walk to map the infestation, followed by four return visits to monitor, reset, and confirm the gophers are gone for good.</p>
+
+      <ol class="method-steps">
+        <li class="method-step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h4>Property walk &amp; assessment</h4>
+            <p>We walk the full site with you, identify active tunnel systems, understand your priorities, and form a plan before a single trap goes in.</p>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h4>Cinch trap placement</h4>
+            <p>Traps are set directly inside active tunnels — the most effective placement method. Cinch traps kill quickly and leave no chemicals in the soil.</p>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="step-num">03 – 05</span>
+          <div class="step-content">
+            <h4>Four follow-up visits</h4>
+            <p>We return to monitor activity, reset traps where needed, and verify the infestation is fully eliminated before we sign off on the job.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="promise-bar">
+        <div class="promise-item">
+          <span class="promise-label">PROFESSIONAL</span>
+          <p class="promise-desc">Licensed, trained, and equipped for residential and commercial properties of any scale.</p>
+        </div>
+        <div class="promise-item">
+          <span class="promise-label">RESPONSIVE</span>
+          <p class="promise-desc">We respond to every inquiry within two business days — no leaving you in the dark.</p>
+        </div>
+        <div class="promise-item">
+          <span class="promise-label">EFFECTIVE</span>
+          <p class="promise-desc">We stay until the gophers are gone. Five scheduled visits, no extra charges for persistence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PRICING ───────────────────────────────────────────────────────── -->
+    <div id="tab-pricing" class="panel">
+      <p class="panel-label">PRICING</p>
+      <h2 class="section-heading">Every yard<br>is different.</h2>
+      <p class="section-body">Terrain, soil composition, and gopher population all affect the scope of the job. That's why we don't quote prices over the phone or by email — it wouldn't be accurate and it wouldn't be fair to you.</p>
+      <p class="section-body">When you schedule an assessment, we'll walk your property together, understand your goals, and give you a precise estimate on the spot. No pressure, no obligation.</p>
+
+      <div class="pricing-includes">
+        <p class="pricing-includes-label">YOUR ESTIMATE COVERS</p>
+        <ul class="pricing-list">
+          <li>Full property walk &amp; tunnel mapping</li>
+          <li>Cinch trap placement throughout active areas</li>
+          <li>Four follow-up monitoring &amp; reset visits</li>
+          <li>Final confirmation before job is closed</li>
+        </ul>
+      </div>
+
+      <a
+        href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2XSDU6UEJoRjTnbpty0aBfmzhiXjEYlrKUV_Fyr5NdXl6glFqw-F7xdM44jo46SAzBf2LtN0YV"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="book-btn">
+        SCHEDULE AN ASSESSMENT
+      </a>
+      <p class="book-note">Opens Google Calendar — no account required</p>
+    </div>
+
+    <!-- ── BOOK ──────────────────────────────────────────────────────────── -->
     <div id="tab-book" class="panel">
       <p class="panel-label">BOOK</p>
-      <h2 class="book-heading">Schedule an inspection.</h2>
-      <p class="book-subtext">Select an available time slot — confirmed bookings go directly to our calendar. Residential and commercial properties welcome.</p>
+      <h2 class="section-heading">Schedule an inspection.</h2>
+      <p class="section-body">Select an available time slot — confirmed bookings go directly to our calendar. Residential and commercial properties welcome across Sonoma and Napa Counties.</p>
       <a
         href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2XSDU6UEJoRjTnbpty0aBfmzhiXjEYlrKUV_Fyr5NdXl6glFqw-F7xdM44jo46SAzBf2LtN0YV"
         target="_blank"
@@ -55,8 +136,15 @@
       <p class="book-note">Opens Google Calendar — no account required to book</p>
     </div>
 
+    <!-- ── CONTACT ───────────────────────────────────────────────────────── -->
     <div id="tab-contact" class="panel">
       <p class="panel-label">CONTACT</p>
+      <h2 class="section-heading">Get in touch.</h2>
+      <p class="section-body">We respond within two business days. For fastest service, call or text directly.</p>
+      <div class="contact-direct">
+        <a href="mailto:maxwell.e.lee@gmail.com" class="contact-direct-link">maxwell.e.lee@gmail.com</a>
+        <a href="tel:3602068165" class="contact-direct-link">360.206.8165</a>
+      </div>
       <form class="contact-form">
         <input type="text" placeholder="NAME">
         <input type="email" placeholder="EMAIL">
@@ -64,6 +152,7 @@
         <button type="submit">SEND</button>
       </form>
     </div>
+
   </main>
 
   <script type="importmap">
